@@ -7,6 +7,7 @@ import java.util.HashMap;
  * HTTP Response abstract class used in communication with the client.
  * This class contains the data that will be sent to the client,
  * including status line, headers, and response body.
+ * @author Julian Grüber (taken from https://github.com/warchildmd/webserver)
  */
 public abstract class HttpResponse {
     /**

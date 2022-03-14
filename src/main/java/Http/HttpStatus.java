@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * @author https://github.com/warchildmd/webserver
  * HTTP statuses with reasons from RFC2616
  *  "100" ; Section 10.1.1: Continue
  *  "101" ; Section 10.1.2: Switching Protocols

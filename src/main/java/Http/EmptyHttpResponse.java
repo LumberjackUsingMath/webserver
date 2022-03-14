@@ -1,5 +1,8 @@
 package Http;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -7,10 +10,10 @@ import java.io.OutputStreamWriter;
 
 /**
  * HttpResponse extension that writes an empty response.
+ * @author  Julian Grüber (taken from https://github.com/warchildmd/webserver)
  */
 public class EmptyHttpResponse extends HttpResponse {
-
-    private final static String TAG = "me.homework.server.http.EmptyHttpResponse";
+    private Logger LOGGER = LoggerFactory.getLogger(EmptyHttpResponse.class);
 
     public EmptyHttpResponse(int statusCode) {
         super();
@@ -38,7 +41,7 @@ public class EmptyHttpResponse extends HttpResponse {
             writer.flush();
             writer.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 }
