@@ -1,0 +1,14 @@
+/Users/juliangruber/Programming/webserver/src/main/java/ClientHandler.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/HttpRequest.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/HttpResponse.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/HttpMethod.java
+/Users/juliangruber/Programming/webserver/src/main/java/exceptions/ConnectionClosedException.java
+/Users/juliangruber/Programming/webserver/src/main/java/Server.java
+/Users/juliangruber/Programming/webserver/src/main/java/exceptions/BadRequestException.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/RawHttpRequest.java
+/Users/juliangruber/Programming/webserver/src/main/java/Applications/FileServerApp.java
+/Users/juliangruber/Programming/webserver/src/main/java/Applications/WebApplication.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/HttpStatus.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/FileHttpResponse.java
+/Users/juliangruber/Programming/webserver/src/main/java/Main.java
+/Users/juliangruber/Programming/webserver/src/main/java/Http/EmptyHttpResponse.java
