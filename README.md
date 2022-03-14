@@ -57,5 +57,5 @@ I adjusted the code a little, in order to contribute. The major changes are:
 3. I used an REST API via Python once
 4. I did not know the HTTP protocol 
 
-Now I know all of them. So, thank you very much for the challenge. 
+Now, I know all of them. So, thank you very much for the challenge. 
 
