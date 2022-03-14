@@ -53,7 +53,7 @@ I adjusted the code a little, in order to contribute. The major changes are:
 
 ### My prerequisites :
 1. I did not know what a Maven project is.
-2. my Java skills were from a university course from 2019, so my code is very junior. 
+2. My Java skills were from a university course in 2019, so my code is very "junior". 
 3. I used an REST API via Python once
 4. I did not know the HTTP protocol 
 
