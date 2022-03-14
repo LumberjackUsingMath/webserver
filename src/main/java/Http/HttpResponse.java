@@ -11,7 +11,7 @@ import java.util.HashMap;
  */
 public abstract class HttpResponse {
     /**
-     * The {@link String} that represents the protocol version, used in the status line (e. g. HTTP/1.1).
+     * The {@link String} that represents the protocol version, used in the status line (e.g. HTTP/1.1).
      */
     protected String protocol = "HTTP/1.1";
 
@@ -58,7 +58,7 @@ public abstract class HttpResponse {
     }
 
     /**
-     * @return {@link String} that represents the protocol version, used in the status line (e. g. HTTP/1.1).
+     * @return {@link String} that represents the protocol version, used in the status line (e.g. HTTP/1.1).
      */
     public String getProtocol() {
         return protocol;

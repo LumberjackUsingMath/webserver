@@ -11,12 +11,10 @@ import java.nio.file.Paths;
  * */
 public class FileHttpResponse extends HttpResponse {
 
-    private static String TAG = "me.homework.server.http.FileHttpResponse";
-
     /**
      * File to be sent to the user.
      */
-    private File inputFile;
+    private final File inputFile;
 
 
     /**

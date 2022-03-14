@@ -1,10 +1,5 @@
 package Http;
 
-/** Source: https://github.com/warchildmd/webserver/blob/master/src/main/java/me/homework/server/http/HttpRequest.java
- * Slightly adjusted and bug fixed
- *
- */
-
 import exceptions.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +18,7 @@ import java.util.HashMap;
  * and parsing the data from the socket.
  */
 public class HttpRequest {
-    private static Logger LOGGER = LoggerFactory.getLogger(HttpRequest.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(HttpRequest.class);
 
     /** Input stream from client socket*/
     private InputStream inputStream;
@@ -126,80 +121,13 @@ public class HttpRequest {
     }
 
 
-    public String getRequestLine() {
-        return requestLine;
-    }
-
-    public void setRequestLine(String requestLine) {
-        this.requestLine = requestLine;
-    }
 
     public String getMethod() {
         return method;
     }
 
-    public void setMethod(String method) {
-        this.method = method;
-    }
-
-    public String getUri() {
-        return uri;
-    }
-
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public HashMap<String, String> getHeaders() {
-        return headers;
-    }
-
-    public void setHeaders(HashMap<String, String> headers) {
-        this.headers = headers;
-    }
-
-    public HashMap<String, String> getParams() {
-        return params;
-    }
-
-    public void setParams(HashMap<String, String> params) {
-        this.params = params;
-    }
-
-    public InputStream getInputStream() {
-        return inputStream;
-    }
-
-    public void setInputStream(InputStream inputStream) {
-        this.inputStream = inputStream;
-    }
-
     public String getFilename() {
         return filename;
-    }
-
-    public void setFilename(String filename) {
-        this.filename = filename;
-    }
-
-    public String getQuery() {
-        return query;
-    }
-
-    public void setQuery(String query) {
-        this.query = query;
-    }
-
-    public void setKeepAlive(boolean keepAlive) {
-        this.keepAlive = keepAlive;
     }
 
     public boolean getKeepAlive() {
