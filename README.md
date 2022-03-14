@@ -35,7 +35,7 @@ I adjusted the code a little, in order to contribute. The major changes are:
 1. Reduced functionality 
 2. Request file by header
 3. Different logging 
-4. Different project structure 
+4. New project structure 
 5. Added keep-alive behaviour 
 
 ### My learning resources
