@@ -15,7 +15,7 @@ import java.nio.file.Paths;
  * @author Julian Grüber (taken from https://github.com/warchildmd/webserver)
  */
 public class FileServerApp implements WebApplication{
-    private Logger LOGGER = LoggerFactory.getLogger(FileServerApp.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(FileServerApp.class);
     private final String dataDirectory;
 
 
@@ -32,9 +32,7 @@ public class FileServerApp implements WebApplication{
     @Override
     public HttpResponse handle(HttpRequest request) {
 
-        /**
-         * Get name of requested file
-         */
+        /* Get name of requested file */
         String filename = request.getFilename();
 
         LOGGER.info("Filename in Application: "  + filename);
@@ -44,7 +42,7 @@ public class FileServerApp implements WebApplication{
         switch (request.getMethod()) {
             case HttpMethod.GET:
                 Path requestedFile = Paths.get(dataDirectory, filename);
-                LOGGER.info("the requested file is: " + requestedFile.toString());
+                LOGGER.info("the requested file is: " + requestedFile);
                 if (requestedFile.normalize().startsWith(Paths.get(dataDirectory).normalize())) {
                     if (Files.exists(requestedFile)) {
                         LOGGER.info("File exists");

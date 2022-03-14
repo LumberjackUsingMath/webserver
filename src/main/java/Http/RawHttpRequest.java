@@ -18,9 +18,9 @@ import java.io.OutputStreamWriter;
  */
 public class RawHttpRequest extends HttpResponse {
 
-    private Logger LOGGER =  LoggerFactory.getLogger(HttpRequest.class);
+    private final Logger LOGGER =  LoggerFactory.getLogger(HttpRequest.class);
 
-    private String content;
+    private final String content;
 
     public RawHttpRequest(int statusCode, String content) {
         super();

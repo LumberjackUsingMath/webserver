@@ -13,7 +13,7 @@ import java.io.OutputStreamWriter;
  * @author  Julian Grüber (taken from https://github.com/warchildmd/webserver)
  */
 public class EmptyHttpResponse extends HttpResponse {
-    private Logger LOGGER = LoggerFactory.getLogger(EmptyHttpResponse.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(EmptyHttpResponse.class);
 
     public EmptyHttpResponse(int statusCode) {
         super();

@@ -12,13 +12,14 @@ import java.io.IOException;
 /**
  *
  * A runnable client class that implements a test client as Runnable, in order to test the multithreading of the server
- * It works technically, but I struggled to properly test it assert statements, as run method is not allow to throw an expection
+ * It works technically, but I struggled to properly test it assert statements, as run method is not allow to throw an
+ * exception
  */
 public class ClientThread extends Thread{
 
-    private Logger LOGGER = LoggerFactory.getLogger(ClientThread.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(ClientThread.class);
 
-    private int port;
+    private final int port;
     private Exception ex =null;
 
     public ClientThread(int port){

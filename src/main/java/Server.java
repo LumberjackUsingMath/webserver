@@ -1,15 +1,9 @@
-/**
- * @
- */
-
-
 import Applications.FileServerApp;
 import Applications.WebApplication;
-import com.ibm.icu.impl.Assert;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -26,20 +20,20 @@ public class Server implements Runnable {
     private final static Logger LOGGER = LoggerFactory.getLogger(Server.class);
 
     /**
-     * The servr socket to accept clients
+     * The server socket to accept clients
      */
-    private ServerSocket server;
+    private final ServerSocket server;
 
     /**
      * The number of workers to use in the thread-pool
      */
-    private int numberOfThreads;
-    private ExecutorService pool;
+    private final int numberOfThreads;
+    private final ExecutorService pool;
 
     /**
      * The Application that the serer will execute
      */
-    private WebApplication app;
+    private final WebApplication app;
 
     private int clientsConnected=0;
 
@@ -47,10 +41,10 @@ public class Server implements Runnable {
     /**
      * Constructor of the webserver to host a web application
      * @param port positive integer
-     * @param numberOfThreads amount of worker that will be used by the theardpool
+     * @param numberOfThreads amount of worker that will be used by the thread-pool
      * @param timeoutServer in milliseconds
-     * @throws IOException
-     * @throws IllegalArgumentException
+     * @throws IOException throws IO exception
+     * @throws IllegalArgumentException throws illegal argument exception
      * */
     public Server( int port, int numberOfThreads, String dataDirectory, int timeoutServer) throws IOException, IllegalArgumentException {
 

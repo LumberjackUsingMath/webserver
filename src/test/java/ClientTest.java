@@ -1,4 +1,3 @@
-import org.apache.hc.client5.http.classic.HttpClient;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
@@ -17,7 +16,7 @@ import java.io.IOException;
 
 public class ClientTest {
     private Thread server; // Thread to let the server run
-    private int port = 8080; // Set port
+    private final int port = 8080; // Set port
 
     @Before
     public void beforeTest() throws IOException {
@@ -36,7 +35,7 @@ public class ClientTest {
     @Test
     public void request() throws IOException {
 
-        /** Create client to send requests*/
+        /* Create client to send requests */
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
 
@@ -65,6 +64,11 @@ public class ClientTest {
 
 
         /* ---- Not working ---
+        Idea to test multithreading via extending the class Thread, in order forward the exception to the test
+        //TODO: Fix
+
+
+
         ClientThread c1 = new ClientThread(port);
         ClientThread c2 = new ClientThread(port);
         ClientThread c3 = new ClientThread(port);
