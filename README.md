@@ -31,8 +31,7 @@ the ClientHandler keeps the request alive, or closes it. If it is kept alive, it
 
 ## Main Resource:
 The main resource for this implementation is this [repository](https://github.com/warchildmd/webserver).
-I adjusted the code a little, in order to show some contribution, which included bug fixing.
-### Changes
+I adjusted the code a little, in order to contribute. The major changes are:
 1. Reduced functionality 
 2. Request file by header
 3. Different logging 
