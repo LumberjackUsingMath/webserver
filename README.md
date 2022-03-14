@@ -1,11 +1,32 @@
-# Multithreaded Webserver implemented using Java
+# Multithreaded webserver implemented using Java
 
 
 ### Description: 
-This a Maven project that uses the Maven standard project structure. It implements a webserver that serves files, which 
+This is a Maven project that uses the Maven standard project structure. It implements a webserver that serves files, which 
 can be requested by HTTP requests of version 1.1 . As I focused on making a proof of concept, I only implemented 
-the GET request. In particular, the GET request specifies the requested txt file in the header
+the GET request. In particular, the GET request specifies the requested .txt file in the header
 "requestedFile". If the file is available in the directory "Data", the server will send it out. 
+
+### Program Structure 
+
+The main function creates a server instance of the class 
+[Server](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/Server.java) 
+that takes the port, number of workers, and the interface 
+[WebApplication](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/Applications/WebApplication.java) 
+as argument. In this case, the web-application [FileServerApp](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/Applications/FileServerApp.java)
+is taken. Inside the main class, the server is started by executing the method run, which in turn lets the server wait 
+for incoming requests. If a request comes, the server forwards it to the thread pool by wrapping it in a new instance of 
+the class [ClientHandler](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/ClientHandler.java), 
+which implements the interface Runnable. The ClientHandler defines how to process the request. In particular, the 
+input stream of the request is parsed to an instance of [HttpRequest](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/Http/HttpRequest.java).
+Then, the request is forwarded to the web-application, which returns a instance of a extension of the abstract class 
+[HttpResponse](https://github.com/LumberjackUsingMath/webserver/blob/master/src/main/java/Http/FileHttpResponse.java). 
+That object sends then the response to the client back. Depending on the header "Connection" of the request,
+the ClientHandler keeps the request alive, or closes it. If it is kept alive, it will be closed by timeout. 
+
+
+
+
 
 
 ## Main Resource:
