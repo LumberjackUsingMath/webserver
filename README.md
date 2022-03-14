@@ -3,9 +3,9 @@
 
 ### Description: 
 This a Maven project that uses the Maven standard project structure. It implements a webserver that serves files, which 
-can be requested by HTTP requests of version 1.1 . As I focused to make a proof of concept, I only implemented 
+can be requested by HTTP requests of version 1.1 . As I focused on making a proof of concept, I only implemented 
 the GET request. In particular, the GET request specifies the requested txt file in the header
-"requestedFile". 
+"requestedFile". If the file is available in the directory "Data", the server will send it out. 
 
 
 ## Main Resource:
